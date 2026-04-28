@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest – Feedback & Support</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="Feedback.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e0769">
+
+</head>
+<body>
+
+    <!--  nav bar start -->
+        <nav class="navbar">
+            <div class="logo">
+                 <a href="Index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo">
+                </a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Destination-Explorer.html">Destination Explorer</a></li>
+                <li><a href="Trip-Budget-Planner.html">Trip Budget Planner</a></li>
+                <li><a href="Random-Trip-Generator.html">Random Trip Generator</a></li>
+                <li><a href="Travel-Mood.html">Travel Mood</a></li>
+                <li><a href="Feedback.html" class="active">Feedback</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    <!--  nav bar end --> 
+      
+    <!--  Feedback & Support start -->
+    <main class="feedback-container">
+        <h1>Feedback & Support</h1>
+
+        <div class="feedback-grid">
+            <section class="form-card">
+                <h2>Send us a Message</h2>
+                <form id="feedback-form">
+                    <div class="input-group">
+                        <label for="user-name">Full Name</label>
+                        <input type="text" id="user-name" required placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="email@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="user-message">Message</label>
+                        <textarea id="user-message" required placeholder="How can we help?" rows="5"></textarea>
+                    </div>
+                    <button type="submit" id="submit-feedback">Send Feedback</button>
+                </form>
+                <div id="form-confirmation" class="hidden-msg">
+                    ✅ Thank you! Your feedback has been saved.
+                </div>
+            </section>
+
+            <section class="faq-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">How do I save a trip? <span>+</span></button>
+                        <div class="accordion-content">
+                            <p>Simply use the Trip Budget Planner and click "Calculate & Save". Your trips are stored in your browser's local storage.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Is this app free to use? <span>+</span></button>
+                        <div class="accordion-content">
+                            <p>Yes! TravelNest is a completely free tool for travelers to plan their next adventure.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Can I use this offline? <span>+</span></button>
+                        <div class="accordion-content">
+                            <p>Since we use localStorage, your saved trips and journey tracker will stay on your device even without internet!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--  Feedback & Support end -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+    
+    <div class="footer-links">
+        <a href="Index.html">Home</a>
+        <a href="Destination-Explorer.html">Destinations</a>
+        <a href="Trip-Budget-Planner.html">Trip Planner</a>
+        <a href="Random-Trip-Generator.html">Random Trip</a>
+        <a href="Travel-Mood.html">Travel Mood</a>
+        <a href="Feedback.html">Feedback</a>
+    </div>
+
+      <!-- Newsletter Form -->
+    <form id="newsletter-form">
+        <h3>Subscribe to our Newsletter</h3>
+        <label for="newsletterEmail" class="sr-only">Email Address</label>
+        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+      <!-- Newsletter Popup -->
+      <div id="newsletter-popup" class="popup">
+        <p>Thank you for subscribing!</p>
+      </div>
+
+      <p class="copyright">
+        &copy; 2026 TravelNest. All Rights Reserved.
+    </p>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="Feedback.js"></script>
+</body>
+</html>

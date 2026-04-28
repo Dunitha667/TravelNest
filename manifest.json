@@ -1,0 +1,26 @@
+{
+  "short_name": "TravelNest",
+  "name": "TravelNest – Your Adventure Guide",
+  "description": "Explore destinations and plan your next journey.",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "images/TravelNest.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/TravelNest.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/Index.html",
+  "display": "standalone",
+  "theme_color": "#0e0769",
+  "background_color": "#6bb4fd"
+}

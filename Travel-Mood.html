@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest – Travel Mood</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="Travel-Mood.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e0769">
+
+</head>
+<body>
+
+    <!--  nav bar start -->
+        <nav class="navbar">
+            <div class="logo">
+                 <a href="Index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo">
+                </a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Destination-Explorer.html">Destination Explorer</a></li>
+                <li><a href="Trip-Budget-Planner.html">Trip Budget Planner</a></li>
+                <li><a href="Random-Trip-Generator.html">Random Trip Generator</a></li>
+                <li><a href="Travel-Mood.html" class="active">Travel Mood</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    <!--  nav bar end -->  
+      
+    <!--  Travel Mood start -->
+    <main class="mood-container">
+        <h1>Set Your Travel Mood</h1>
+
+        <section class="soundscape-card">
+            <h2>Ambient Soundscapes</h2>
+            <div class="sound-controls">
+                <div class="sound-item">
+                    <span>🏖️ Beach Waves</span>
+                    <button class="audio-toggle" data-sound="beach">Play</button>
+                    <audio id="beach-audio" loop src="sounds/beach.mp3"></audio>
+                </div>
+                <div class="sound-item">
+                    <span>🌲 Quiet Forest</span>
+                    <button class="audio-toggle" data-sound="forest">Play</button>
+                    <audio id="forest-audio" loop src="sounds/forest.mp3"></audio>
+                </div>
+                <div class="sound-item">
+                    <span>☕ City Cafe</span>
+                    <button class="audio-toggle" data-sound="city">Play</button>
+                    <audio id="city-audio" loop src="sounds/city.mp3"></audio>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracker-card">
+            <h2>My Journey Tracker</h2>
+                <div class="tracker-input">
+                    <select id="track-dest">
+                        <option value="" disabled selected>Select Destination</option>
+                        <option value="France">France</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Antarctica">Antarctica</option>
+                    </select>
+
+                    <select id="track-status">
+                        <option value="visited">Visited ✅</option>
+                        <option value="planned">Planned 📍</option>
+                    </select>
+                    
+                    <button id="add-track-btn">Add to Map</button>
+                </div>
+
+            <div class="stats-bar">
+                Total Visited: <span id="visit-count">0</span>
+            </div>
+
+            <div id="tracker-list" class="tracker-list">
+                </div>
+        </section>
+    </main>
+    <!--  Travel Mood end -->
+
+  <!-- Footer Start -->
+    <footer class="footer">
+    
+    <div class="footer-links">
+        <a href="Index.html">Home</a>
+        <a href="Destination-Explorer.html">Destinations</a>
+        <a href="Trip-Budget-Planner.html">Trip Planner</a>
+        <a href="Random-Trip-Generator.html">Random Trip</a>
+        <a href="Travel-Mood.html">Travel Mood</a>
+        <a href="Feedback.html">Feedback</a>
+    </div>
+
+      <!-- Newsletter Form -->
+    <form id="newsletter-form">
+        <h3>Subscribe to our Newsletter</h3>
+        <label for="newsletterEmail" class="sr-only">Email Address</label>
+        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+      <!-- Newsletter Popup -->
+      <div id="newsletter-popup" class="popup">
+        <p>Thank you for subscribing!</p>
+      </div>
+
+      <p class="copyright">
+        &copy; 2026 TravelNest. All Rights Reserved.
+    </p>
+    </footer>
+  <!-- Footer End -->
+
+    <script src="Travel-Mood.js"></script>
+</body>
+</html>

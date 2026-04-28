@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest – Random Trip Generator</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="Random-Trip-Generator.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e0769">
+
+</head>
+<body>
+
+    <!--  nav bar start -->
+        <nav class="navbar">
+            <div class="logo">
+                 <a href="Index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo">
+                </a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Destination-Explorer.html">Destination Explorer</a></li>
+                <li><a href="Trip-Budget-Planner.html">Trip Budget Planner</a></li>
+                <li><a href="Random-Trip-Generator.html" class="active">Random Trip Generator</a></li>
+                <li><a href="Travel-Mood.html">Travel Mood</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    <!--  nav bar end -->
+
+    <!--  Generator start -->
+    <main class="randomizer-container">
+        <h1>Find Your Next Adventure</h1>
+        
+        <div class="filter-card">
+            <div class="filter-group">
+                <label for="travel-type">I'm looking for:</label>
+                <select id="travel-type">
+                    <option value="adventure">Adventure</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="nature">Nature</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="budget-range">My budget is:</label>
+                <select id="budget-range">
+                    <option value="low">Low ($)</option>
+                    <option value="medium">Medium ($$)</option>
+                    <option value="high">High ($$$)</option>
+                </select>
+            </div>
+
+            <button id="surprise-btn">Surprise Me!</button>
+        </div>
+
+        <section id="suggestion-display" class="suggestion-card" style="display: none;">
+            <div id="dest-content">
+                <h2 id="suggested-dest">Your Destination</h2>
+                <img id="suggested-img" src="images/TravelNest.png" alt="Destination">
+                <p id="suggested-desc"></p>
+                
+                <div class="action-buttons">
+                    <button id="wishlist-btn">Add to Wishlist ❤️</button>
+                    <button id="retry-btn" class="secondary-btn">Surprise Me Again! 🔄</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="wishlist-section">
+            <h2>My Travel Wishlist</h2>
+            <div id="wishlist-grid"></div>
+        </section>
+    </main>
+    <!--  Generator end -->
+
+  <!-- Footer Start -->
+    <footer class="footer">
+    
+    <div class="footer-links">
+        <a href="Index.html">Home</a>
+        <a href="Destination-Explorer.html">Destinations</a>
+        <a href="Trip-Budget-Planner.html">Trip Planner</a>
+        <a href="Random-Trip-Generator.html">Random Trip</a>
+        <a href="Travel-Mood.html">Travel Mood</a>
+        <a href="Feedback.html">Feedback</a>
+    </div>
+
+      <!-- Newsletter Form -->
+    <form id="newsletter-form">
+        <h3>Subscribe to our Newsletter</h3>
+        <label for="newsletterEmail" class="sr-only">Email Address</label>
+        <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+      <!-- Newsletter Popup -->
+      <div id="newsletter-popup" class="popup">
+        <p>Thank you for subscribing!</p>
+      </div>
+
+      <p class="copyright">
+        &copy; 2026 TravelNest. All Rights Reserved.
+    </p>
+    </footer>
+  <!-- Footer End -->
+
+    <script src="Random-Trip-Generator.js"></script>
+</body>
+</html>
